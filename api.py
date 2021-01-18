@@ -12,7 +12,7 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 
 BASE_URL = '/v1/'
 
-@app.route('hello-world', methods=['GET'])
+@app.route(BASE_URL + 'hello-world', methods=['GET'])
 def helloWorld():
     print('GET Request - /v1/hello-world')
     return jsonify({'msg': 'Hello World'})
